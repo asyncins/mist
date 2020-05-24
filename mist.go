@@ -19,6 +19,7 @@
 package main
 
 import (
+	"fmt"
 	"math/rand"
 	"sync"
 	"time"
@@ -50,6 +51,7 @@ type Mist struct {
 	saltMin    int64 // 随机数值下限
 }
 
+/* 初始化 Mist 结构体*/
 func NewMist() *Mist {
 	mist := Mist{increas: 1, salt: 0, sequence: 0, saltMax: 255, saltMin: 1}
 	return &mist
@@ -62,11 +64,6 @@ func (c *Mist) Generate() int64 {
 	// 通过时间戳对比决定序列号的值
 	if c.timestamp == currentTime {
 		c.sequence = (c.sequence + 1) & sequenceMax
-		if c.sequence == 0 {
-			for currentTime <= c.timestamp {
-				currentTime = time.Now().UnixNano() / 1e6
-			}
-		}
 	} else {
 		c.sequence = 0
 	}
@@ -79,8 +76,10 @@ func (c *Mist) Generate() int64 {
 }
 
 func main() {
+	// 使用方法
 	mist := NewMist()
-	for i := 0; i < b.N; i++ {
-		mist.Generate()
+	for i := 0; i < 10; i++ {
+		fmt.Println(mist.Generate())
 	}
+	fmt.Println(int64(1<<47 - 1))
 }
