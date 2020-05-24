@@ -112,7 +112,8 @@ CAP 是分布式架构中最重要的理论，C 指的是一致性、A 指的是
 ```
 内存 16 GB 2133 MHz LPDDR3
 处理器 2.3 GHz 双核Intel Core i5
-操作系统 MacBook Pro (13-inch, 2017, Two Thunderbolt 3 ports)
+操作系统 macOS Catalina
+机器 MacBook Pro (13-inch, 2017, Two Thunderbolt 3 ports)
 ```
 
 
