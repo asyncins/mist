@@ -1,5 +1,5 @@
 
-![MistLogo](http://can.sfhfpc.com/mistLogo.png)
+![MistLogo](http://can.sfhfpc.com/mistLogo-300px.png)
 
 # Mist 薄雾算法
 
