@@ -81,5 +81,4 @@ func main() {
 	for i := 0; i < 10; i++ {
 		fmt.Println(mist.Generate())
 	}
-	fmt.Println(int64(1<<47 - 1))
 }
