@@ -78,7 +78,7 @@ snowflake 受时间戳影响，使用上限不超过 70 年。
 
 薄雾算法 Mist 由书籍《Python3 反爬虫原理与绕过实战》的作者韦世东综合 [百度 UidGenerator](https://github.com/baidu/uid-generator)、 [美团 Leaf](https://tech.meituan.com/2017/04/21/mt-leaf.html) 和 [微信序列号生成器 seqsvr](https://www.infoq.cn/article/wechat-serial-number-generator-architecture) 中介绍的技术点，同时考虑高性能分布式序列号生成器架构后设计的一款“递增态势、不依赖数据库、高性能且不受时间回拨影响”的全局唯一序列号生成算法。
 
-![mistSturct](http://can.sfhfpc.com/mist-0987.png)
+![mistSturct](http://can.sfhfpc.com/7798.png)
 
 薄雾算法不受时间戳影响，受到数值大小影响。薄雾算法高位数值上限计算方式为`int64(1<<47 - 1)`，上限数值`140737488355327` 百万亿级，假设每天消耗 10 亿，薄雾算法能使用 385+ 年。
 
